@@ -1,35 +1,46 @@
-<nav class="navbar navbar-default" role="navigation">
+
+
+
+<nav class="navbar navbar-default all " role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">Job Listing </a>
+        <div class="navbar-header collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav-menu clearfix unstyled">
+            <li><a >八戒－欢－迎－你 </a></li>
+
+            <li><a href="/" class="navbar-brand three-d active"> 招聘首页 <span class="three-d-box"><span class="front">招聘首页</span><span class="back">招聘首页</span></span> </a></li>
+            <li><a href="/jobs" class="three-d">热门招聘 <span class="three-d-box"><span class="front">热门招聘</span><span class="back">Hot job</span></span> </a></li>
+            <li><a href="/jobs" class="three-d"> 高薪职位 <span class="three-d-box"><span class="front">高薪职位</span><span class="back">HP jobs</span></span> </a></li>
+            <li><a href="/about" class="three-d"> 关于我们 <span class="three-d-box"><span class="front">关于我们</span><span class="back">About</span></span> </a></li>
+
+            <% if current_user %>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle three-d" data-toggle="dropdown">
+                           Hi!, <%= current_user.email %><span class="three-d-box"><span class="front">Hi!, <%= current_user.email %></span><span class="back">Hi!, <%= current_user.email %></span></span>
+                   <b class="caret"></b>
+                </a>
+
+                  <ul class="clearfix unstyled drop-menu nav navbar-nav navbar-right">
+                     <% if current_user.admin? %>
+                        <li><a href="/admin/jobs" class="three-d"> Admin Panel <span class="three-d-box"><span class="front">管理员</span><span class="back">Admin Panel</span></span> </a></li>
+                     <% end %>
+                    <li><a rel="nofollow" data-method="delete" href="/users/sign_out" class="three-d"> 登出 <span class="three-d-box"><span class="front">登出</span><span class="back">登出</span></span> </a></li>
+                  </ul>
+              </li>
+            <% else %>
+
+             <li><a href="#" class="three-d"> 用户用户 <span class="three-d-box"><span class="front">  用户 </span><span class="back"> users </span></span></a>
+                <ul class="clearfix unstyled drop-menu nav navbar-nav navbar-right">
+                  <li>
+                    <li><a href="/users/sign_up" class="three-d"> Sign--up<span class="three-d-box"><span class="front">注册</span><span class="back">Sign up</span></span> </a></li>
+                    <li><a href="/users/sign_in" class="three-d"> Sign---.in<span class="three-d-box"><span class="front">登入</span><span class="back">Sign in</span></span> </a></li>
+                  </li>
+                 <% end %>
+               </ul>
+             </li>
+             <br clear= "all" />
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <% if !current_user %>
-                  <li><%= link_to("注册", new_user_registration_path) %> </li>
-                  <li><%= link_to("登入", new_user_session_path) %></li>
-                <% else %>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Hi!, <%= current_user.email %>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">.
-                      <% if current_user.admin? %>
-                        <li> <%= link_to("Admin Panel", admin_jobs_path) %> </li>
-                      <% end %>
-                        <li> <%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
-                    </ul>
-                  </li>
-                <% end %>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
 </nav>

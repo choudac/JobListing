@@ -18,44 +18,55 @@
  @import "bootstrap";
  @import "font-awesome";
 
- .jumbotron {
-   background-image:url('http://y.photo.qq.com/img?s=n0m7YMg0L&l=y.jpg');
+ .all {
+   background-image:url('http://image.tupian114.com/20160915/0054305583.jpg');
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: 1380px 1500px;
+   padding-bottom: 10px;
+ }
+
+
+ .jumbotron {
+   background-image:url('http://hbimg.b0.upaiyun.com/496ef14c22a2a9b716139d03be1c3a1055d1bb36e41df-OXxd4L_fw658');
+   background-repeat: no-repeat;
+   background-size: 1380px 550px;
    padding-bottom: 110px;
  }
 
+
+
+
  .title {
    font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-   text-align: center;
-   margin-top: 200px;
+   text-align: left;
+   margin-top: 0px;
    margin-bottom: 80px;
  }
 
  .slogan {
-   margin-top: 10px;
+   margin-top: 15px;
    margin-bottom: 50px;
-   text-align: center;
+   text-align: left;
    color: white;
    top: 12px;
  }
 
  .lead {
    margin-bottom: 60px;
-   text-align: center;
-   color: white;
+   text-align: 20px;
+   color: black;
  }
 
  .caption {
   margin: 30px;
-  text-align: center;
+  text-align: 30px;
   top: 20px;
 }
 
 .thumbnail {
     border: 0 none;
     box-shadow: none;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .custab{
@@ -71,4 +82,227 @@
 .custab:hover{
   box-shadow: 3px 3px 0px transparent;
   transition: 0.5s;
+}
+
+
+
+
+
+.nav-menu {
+	display: block;
+	/* background: #74adaa;*/
+	width:2200px;
+	margin: 10px auto 0px;
+
+}
+.nav-menu > li {
+	display: inline;
+  float: left;
+	border-right:1px solid #94c0be;
+}
+.nav-menu > li:last-child {
+	border-right: none;
+}
+.nav-menu li a {
+	color: black;
+	display: block;
+	text-decoration: none;
+	/*调用本地字体*/
+	font-family:sansationregular;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-transform: capitalize;
+	overflow: visible;
+	line-height: 20px;
+	font-size: 20px;
+	padding: 15px 30px 15px 31px;
+}
+.three-d {
+
+	/* 任务三、设置3D舞台布景 */
+	-webkit-perspective: 200px;
+	-moz-perspective: 200px;
+	-ms-perspective: 200px;
+	-o-perspective: 200px;
+	perspective: 200px;
+          /*任务四、设置3D舞台布景过渡效果*/
+	-webkit-transition: all .07s linear;
+ 	-moz-transition: all .07s linear;
+ 	-ms-transition: all .07s linear;
+ 	-o-transition: all .07s linear;
+ 	transition:all .7s linear;
+	position: relative;
+
+}
+.three-d:not(.active):hover {
+	cursor: pointer;
+
+}
+/*任务五、给不是当前状态的3D舞台的悬浮与聚焦状态设置变形效果*/
+.three-d:not(.active):hover .three-d-box,  .three-d:not(.active):focus .three-d-box {
+	-wekbit-transform: translateZ(-25px) rotateX(90deg);
+ 	-moz-transform: translateZ(-25px) rotateX(90deg);
+ 	-o-transform: translateZ(-25px) rotateX(90deg);
+ 	-ms-transform: translateZ(-25px) rotateX(90deg);
+ 	transform: translateZ(-25px) rotateX(90deg);
+/*    -webkit-transform:rotateX(90deg) translatez(-25px);*/
+       /*   -webkit-transform:rotatex(90deg);*/
+}
+.three-d-box {
+          /*任务六、给3D舞台中“.three-d-box”设置过渡与变形效果*/
+	-webkit-transition: all .3s ease-out;
+ 	-moz-transition: all .3s ease-out;
+ 	-ms-transition: all .3s ease-out;
+ 	-o-transition: all .3s ease-out;
+ 	transition: all .3s ease-out;
+	-webkit-transform: translatez(-25px);
+	-moz-transform: translatez(-25px);
+	-ms-transform: translatez(-25px);
+	-o-transform: translatez(-25px);
+	transform: translatez(-25px);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	-o-pointer-events: none;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*任务七、给导航设置3D前，与3D后变形效果*/
+.front {
+	-webkit-transform: rotatex(0deg) translatez(25px);
+	-moz-transform: rotatex(0deg) translatez(25px);
+	-ms-transform: rotatex(0deg) translatez(25px);
+	-o-transform: rotatex(0deg) translatez(25px);
+	transform: rotatex(0deg) translatez(25px);
+}
+.back {
+	-webkit-transform: rotatex(-90deg) translatez(25px);
+	-moz-transform: rotatex(-90deg) translatez(25px);
+	-ms-transform: rotatex(-90deg) translatez(25px);
+	-o-transform: rotatex(-90deg) translatez(25px);
+	transform: rotatex(-90deg) translatez(25px);
+	color: #FFE7C4;
+}
+.front, .back {
+	/*          border:1px solid red;*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #74adaa;
+	padding: 15px 30px 15px 31px;
+	color: white;
+	-webkit-pointer-events: none;
+	-moz-pointer-events: none;
+	-ms-pointer-events: none;
+	-o-pointer-events: none;
+	pointer-events: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*任务八、设置导航当前状态与悬浮状态下的背景效果*/
+.nav-menu li .active .front,  .nav-menu li .active .back,  .nav-menu li a:hover .front,  .nav-menu li a:hover .back {
+	background-color: #51938f;
+	-webkit-background-size: 5px 5px;
+	background-size: 5px 5px;
+	background-position: 0 0, 30px 30px;
+	background-image: -webit-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: -moz-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: -ms-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: -o-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-image: linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+}
+.nav-menu ul {
+	position: absolute;
+	text-align: left;
+	line-height: 40px;
+	font-size: 14px;
+	width: 200px;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transform-origin: 0px 0px;
+	-moz-transform-origin: 0px 0px;
+	-ms-transform-origin: 0px 0px;
+	-o-transform-origin: 0px 0px;
+	transform-origin: 0px 0px;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	-ms-transform: rotateX(-90deg);
+	-o-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+/*任务九、显示下拉导航菜单，并其设置一个变形效果*/
+.nav-menu > li:hover ul {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	-ms-transform: rotateX(0deg);
+	-o-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+
+
+
+.logo-link {
+ width:191px;
+ height:151px;
+ text-decoration:none;
+ display:block;
+ background-image:url(https://qtum.org/wp-content/themes/twentyfifteen/images/investor/Xiaolai.jpg);
+ background-position:0px 0;
+ background-repeat: no-repeat;
+}
+.logo-link:hover,.logo-link:active {
+ background-position:0 0;
+ background-image: url(http://tva3.sinaimg.cn/crop.266.205.1422.1422.180/006pvj13jw8f2djyrzotkj31jk1c6dro.jpg);
+}
+
+.logo-link-first {
+ width:191px;
+ height:151px;
+ text-decoration:none;
+ display:block;
+ background-image:url(https://hackschool.herokuapp.com/images/haha.jpg);
+ background-position:0px 0;
+ background-repeat: no-repeat;
+}
+.logo-link-first:hover,.logo-link:active {
+ background-position:0 0;
+ background-image: url(https://cdn-standard4.discourse.org/uploads/qzy/original/1X/116d6530d7b8fb55bdae519fd553edb9880d6b24.png);
+}
+
+
+.logo-link-second {
+ width:191px;
+ height:151px;
+ text-decoration:none;
+ display:block;
+ background-image:url(http://www.vitbbs.cn/uploads/allimg/110603/1_110603162108_2.gif);
+ background-position:0px 0;
+ background-repeat: no-repeat;
+}
+.logo-link-second:hover,.logo-link:active {
+ background-position:0 0;
+ background-image: url(http://www.tupian1.cn/uploads/allimg/101210/2319311H7-0.jpg);
 }
